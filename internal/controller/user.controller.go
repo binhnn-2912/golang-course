@@ -2,7 +2,7 @@ package controller
 
 import (
 	"golang-course-api/internal/service"
-	"net/http"
+	"golang-course-api/pkg/response"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,7 +21,7 @@ func (uc *UserController) GetUsers(c *gin.Context) {
 	name := c.DefaultQuery("name", "Hương")
 	uid := c.Query("uid")
 
-	c.JSON(http.StatusOK, gin.H{
+	response.SuccessResponse(c, 20001, gin.H{
 		"message": uc.userService.GetUsersService(),
 		"name":    name,
 		"uid":     uid,
