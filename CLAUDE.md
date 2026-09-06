@@ -13,12 +13,19 @@ thứ tự, và mỗi khi học xong 1 bài, tôi sẽ báo: "Bài số X: [tên
    file này mỗi lần note, không dựa vào trí nhớ từ note trước.
 4. Giải thích lại kiến thức bài học bằng lời của bạn, dựa trên source code
    thực tế tôi đã viết (không giải thích chung chung, phải bám vào code).
-5. Append phần note mới vào cuối `README.md`, đúng format trong bước 3.
-6. Cập nhật `docs/PROGRESS.md`: thêm dòng ghi nhận bài vừa hoàn thành.
+5. Tạo file note riêng cho bài học tại thư mục gốc dự án, đặt tên theo cú
+   pháp `LESSON_[số]-[TỪ KHÓA].md` (từ khóa viết hoa, không dấu, không
+   khoảng trắng — vd `LESSON_1-STRUCTURES.md`, `LESSON_2-GIN.md`,
+   `LESSON_3-ERRORHANDLER.md`). Nội dung file đúng format trong bước 3.
+6. Thêm link tới file note vừa tạo vào danh sách bài học trong `README.md`.
+7. Cập nhật `docs/PROGRESS.md`: thêm dòng ghi nhận bài vừa hoàn thành.
 
 ## Nguyên tắc
 - Không tự ý đổi cấu trúc format trong NOTE_FORMAT.md.
 - Không note lại bài đã có trong PROGRESS.md trừ khi tôi yêu cầu sửa.
 - Nếu tôi chỉ hỏi kiến thức (không nói "note lại"), chỉ giải thích, KHÔNG
-  tự động ghi vào README.md.
+  tự động tạo/sửa file `LESSON_*.md` hay `README.md`.
 - Ưu tiên ví dụ code lấy trực tiếp từ source thực tế của tôi hơn là ví dụ tự nghĩ.
+- Mỗi bài học là 1 file riêng — không gộp nhiều bài vào chung 1 file
+  `LESSON_*.md`, và không note nội dung bài học trực tiếp vào `README.md`
+  (README chỉ là mục lục/index, trỏ link tới từng file).
