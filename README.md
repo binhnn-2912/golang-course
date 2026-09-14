@@ -10,3 +10,4 @@ Mỗi bài học được note trong 1 file riêng, đặt tên `LESSON_[số]-[
 - [Bài 3: Error handler](LESSON_3-ERRORHANDLER.md)
 - [Bài 4: Goroutine](LESSON_4-GOROUTINE.md)
 - [Bài 5: Channel (buffered / unbuffered)](LESSON_5-CHANNEL.md)
+- [Bài 6: WaitGroup + Channel](LESSON_6-WAITGROUP_CHANNEL.md)
