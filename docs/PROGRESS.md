@@ -8,3 +8,4 @@
 | 4      | Goroutine | 2026-09-06 | `cmd/server/main.go` |
 | 5      | Channel (buffered/unbuffered) | 2026-09-13 | `cmd/server/main.go` |
 | 6      | WaitGroup + Channel | 2026-09-14 | `cmd/server/main.go` |
+| 7      | Select | 2026-09-14 | `cmd/server/main.go` |
