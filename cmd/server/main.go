@@ -2,34 +2,44 @@ package main
 
 import (
 	"fmt"
-	"log"
+	"runtime"
 	"sync"
-
-	"golang-course-api/internal/router"
+	"time"
 )
 
+func heavyTask(wg *sync.WaitGroup) {
+	defer wg.Done()
+	sum := 0
+	for i := 0; i < 100e8; i++ {
+		sum++
+	}
+	fmt.Println("Sum:", sum)
+}
+
 func main() {
-	r := router.New()
+	// r := router.New()
 
-	counter := 0
+	numCPU := runtime.NumCPU()
+	fmt.Println("CPU number: ", numCPU)
+
+	runtime.GOMAXPROCS(numCPU)
+
+	start := time.Now()
+
 	var wg sync.WaitGroup
-	var mu sync.Mutex
 
-	for i := 0; i < 1000; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			mu.Lock()
-			counter++
-			mu.Unlock()
-		}()
+	wg.Add(10)
+
+	for range 10 {
+		go heavyTask(&wg)
 	}
 
 	wg.Wait()
-	fmt.Println("Counter cuối cùng:", counter)
+	fmt.Println("Total time:", time.Since(start))
+
 	// Start server on port 8080 (default)
 	// Server will listen on 0.0.0.0:8080 (localhost:8080 on Windows)
-	if err := r.Run(); err != nil {
-		log.Fatalf("failed to run server: %v", err)
-	}
+	// if err := r.Run(); err != nil {
+	// 	log.Fatalf("failed to run server: %v", err)
+	// }
 }

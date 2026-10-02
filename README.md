@@ -14,3 +14,4 @@ Mỗi bài học được note trong 1 file riêng, đặt tên `LESSON_[số]-[
 - [Bài 7: Select](LESSON_7-SELECT.md)
 - [Bài 8: Context](LESSON_8-CONTEXT.md)
 - [Bài 9: Race condition + Mutex](LESSON_9-RACE_MUTEX.md)
+- [Bài 10: GOMAXPROCS và giới hạn CPU](LESSON_10-GOMAXPROCS.md)
