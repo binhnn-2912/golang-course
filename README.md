@@ -13,3 +13,4 @@ Mỗi bài học được note trong 1 file riêng, đặt tên `LESSON_[số]-[
 - [Bài 6: WaitGroup + Channel](LESSON_6-WAITGROUP_CHANNEL.md)
 - [Bài 7: Select](LESSON_7-SELECT.md)
 - [Bài 8: Context](LESSON_8-CONTEXT.md)
+- [Bài 9: Race condition + Mutex](LESSON_9-RACE_MUTEX.md)

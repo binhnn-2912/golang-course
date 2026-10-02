@@ -10,3 +10,4 @@
 | 6      | WaitGroup + Channel | 2026-09-14 | `cmd/server/main.go` |
 | 7      | Select | 2026-09-14 | `cmd/server/main.go` |
 | 8      | Context | 2026-10-02 | `cmd/server/main.go` |
+| 9      | Race condition + Mutex | 2026-10-02 | `cmd/server/main.go` |
